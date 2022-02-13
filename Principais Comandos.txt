@@ -1,0 +1,75 @@
+COMANDOS GENÉRICOS:
+
+pwd = indica o diretório atual de forma completa;
+ls = lista os arquivos do diretório atual;
+ls --help = informa todas as possibilidades do comando "ls";
+ls -l = lista mais informações dos arquivos do diretório atual;
+ls -l -h = lista em megas o tamanho dos arquivos no diretório
+ls -R = lista todos os arquivos de todos os subdiretórios do diretório atual;
+ls -a = lista inclusive os arquivos ocultos;
+ls -la = da pra juntar os comandos;
+clear ou ctrl+l = limpa os comandos digitados em tela;
+crtl+c = interrompe o comando;
+seta pra cima = demonstra o histórico dos comandos executados;
+cd = change directory (trocar de diretório) = acessar nova pasta;
+cd .. = voltar um diretório
+
+
+CRIANDO E APAGANDO DIRETÓRIOS:
+
+mkdir nomePasta = cria a pasta;
+rmdir nomePasta = deleta a pasta se estiver vazia;
+rm -rf nomePasta = deleta a pasta mesmo contendo arquivo;
+
+CRIANDO ARQUIVO:
+touch nomeArquivo.txt = Cria um novo arquivo com a extensão informada;
+
+ACESSANDO O ARQUIVO PARA EDIÇÃO:
+nano nomeArquivo.txt;
+
+MOVER O ARQUIVO:
+mv index.html diretório novo
+
+ACESSAR O VSCODE:
+code .  na pasta específica aberta no bash;
+
+code . nomeArquivo.txt = abre o vscode para editar o arquivo;
+
+
+COMANDOS GIT: (CRIAR E SUBIR NOVOS PROJETOS)
+git init
+git status
+git add .
+git commit -m "Arquivos iniciais"
+git log
+git remote add origin git@github.com:johnnyofoco/projeto-teste.git
+git push --set-upstream origin master
+git push
+
+
+COMANDOS GIT: (CRIAR E SUBIR NOVOS PROJETOS)
+git init = inicializa o projeto no git
+git status = verifica o status dos arquivos do projeto
+git add . = adiciona todos os arquivos no stage
+git commit -m "Arquivos iniciais" = commita todos os arquivos no stage
+git log = demonstra todos os commit´s realizados no projeto
+git remote add origin git@github.com:johnnyofoco/projeto-teste.git
+git push --set-upstream origin master = define origin master como default push
+git push = enviar os arquivos adicionados e comitados para o repositório remoto;
+
+outros:
+git diff = verifica o que foi alterado;
+
+
+CONFIGURAR O GITHUB NO BASH: (CLONAR PROJETOS DO GITHUB)
+git clone git@github.com:johnnyofoco/projeto-teste.git
+
+
+git config --global user.email "johnny.marlon.paula@gmail.com"
+git config --global user.name "johnnyofoco"
+ssh-keygen -t ed25519 -C "johnny.marlon.paula@gmail.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+clip < ~/.ssh/id_ed25519.pub
+Colar a chave pelo site https://github.com/settings/keys
+
